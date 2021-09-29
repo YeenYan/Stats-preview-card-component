@@ -1,0 +1,84 @@
+@use '../abstract/' as a;
+
+img {
+    max-width: 100%;
+}
+
+body {
+    background-color: a.$primary-main-bg-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 5rem auto;
+}
+
+.card {
+    background-color: a.$primary-card-bg-color;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.col--first {
+    display: flex;
+    background-color: a.$primary-accent;
+    position: relative;
+
+    .col__image {
+        mix-blend-mode: multiply;
+        background-size: cover;
+        background-position: center center;
+        width: 100%;
+    }
+}
+
+.col--second {
+    padding: 3em;
+}
+
+@media (min-width: 1100px){
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 1400px;
+    }
+
+    .card {
+        display: flex;
+    }
+
+    .col {
+        width: 50%;
+    }
+
+    .col--first {
+        order: 2;
+    }
+
+    .col--second {
+        order: 1;
+        padding: 5rem;
+    }
+
+    .col__stat {
+        display: flex;
+        gap: 80px;
+
+        &-content + &-content {
+            margin-top: 0;
+        }
+    }
+
+}
