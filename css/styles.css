@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca:wght@200;400&display=swap");
+body {
+  font-size: 0.94rem;
+}
+
+.col__header,
+.col__text {
+  font-family: "Inter", sans-serif;
+}
+
+.col {
+  text-align: center;
+}
+.col__header {
+  font-size: clamp(2rem, 5vw + 1rem, 2.5rem);
+  margin-bottom: 0.5em;
+}
+.col__text {
+  font-size: clamp(0.94rem, 3vw + 1rem, 1rem);
+  line-height: 1.6;
+  margin: 0 auto 4em auto;
+  width: 90%;
+  max-width: 400px;
+}
+.col__stat {
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.col__stat-num {
+  font-size: clamp(1.5rem, 3vw + 1rem, 1.8rem);
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+.col__stat-name {
+  font-weight: lighter;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.col__stat-content + .col__stat-content {
+  margin-top: 2rem;
+}
+
+@media (min-width: 1100px) {
+  .col {
+    text-align: left;
+  }
+  .col__text {
+    margin: 0 auto 4em 0;
+  }
+}
+.card {
+  color: white;
+}
+
+.col__header-span {
+  color: #aa5cdb;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  background-color: #090b1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 600px;
+  margin: 5rem auto;
+}
+
+.card {
+  background-color: #1b1938;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.col--first {
+  display: flex;
+  background-color: #aa5cdb;
+  position: relative;
+}
+.col--first .col__image {
+  mix-blend-mode: multiply;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+}
+
+.col--second {
+  padding: 3em;
+}
+
+@media (min-width: 1100px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .container {
+    width: 90%;
+    max-width: 1400px;
+  }
+
+  .card {
+    display: flex;
+  }
+
+  .col {
+    width: 50%;
+  }
+
+  .col--first {
+    order: 2;
+  }
+
+  .col--second {
+    order: 1;
+    padding: 5rem;
+  }
+
+  .col__stat {
+    display: flex;
+    gap: 80px;
+  }
+  .col__stat-content + .col__stat-content {
+    margin-top: 0;
+  }
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*# sourceMappingURL=styles.css.map */
