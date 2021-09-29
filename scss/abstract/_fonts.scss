@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca:wght@200;400&display=swap');
+
+// font-family: 'Inter', sans-serif;
+// font-family: 'Lexend Deca', sans-serif;
+
+$font-size: .94rem;
+$line-height: 1.6;
+$font-weight-700: 700; 
+
+body {
+    font-size: $font-size;
+}
+
+.col__header,
+.col__text {
+    font-family: 'Inter', sans-serif;
+}
+
+.col {
+    text-align: center;
+
+    &__header{
+        font-size: clamp(2rem, 5vw + 1rem ,2.5rem);
+        margin-bottom: .5em;
+    }
+
+    &__text {
+        font-size: clamp(.94rem, 3vw + 1rem ,1rem);
+        line-height: $line-height;
+        margin: 0 auto 4em auto;
+        width: 90%;
+        max-width: 400px;
+    }
+
+    &__stat {
+        font-family: 'Lexend Deca', sans-serif;
+    }
+}
+
+.col__stat {
+
+    &-num {
+        font-size: clamp(1.5rem, 3vw + 1rem, 1.8rem);
+        font-weight: $font-weight-700;
+        margin-bottom: .4rem;
+    }
+
+    &-name {
+        font-weight: lighter;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    &-content + &-content {
+        margin-top: 2rem;
+    }
+
+}
+
+
+@media (min-width: 1100px){
+    
+    .col {
+        text-align: left;
+
+        &__text {
+            margin: 0 auto 4em 0;
+        }
+    }
+
+}
